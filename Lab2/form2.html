@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<script src="javascript.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/formstyle.css">
+
+</head>
+
+<body>
+
+<h2>User Registration for Workshop in ML in Biology</h2>
+
+<form onsubmit="return validateForm()">
+	<label>
+	Name:
+	</label>
+
+ <input type="text" id="name">
+ <br><br>
+
+ 	<label>
+ 		Email:
+ 	</label>
+
+<input type="text" id="email">
+<br><br>
+
+	<label>
+		Password:
+	</label>
+
+<input type="Password" name="password" id="password" required>
+<br><br>
+
+	<label>	
+		Confirm Password:
+	</label>
+
+<input type="password" name="confirm_password" id="confirm_password" required>
+<br><br>
+
+	<label>
+		Category
+	</label>
+
+<input type="radio" name="category" id="student" value="student"> Student
+<input type="radio" name="category" id="professional" value="professional"> Professional
+<br><br>
+
+	<label>
+		Date of birth
+	</label>
+
+<input type="date" id="dob">
+
+	<label>
+		State
+	</label>
+	
+<select name="country" id="country">
+	<option value="">Select State</option>
+	<option value="Karnataka">Karnataka</option>
+	<option value="TamilNadu">Tamil Nadu</option>
+	<option value="Kerala">Kerala</option>
+</select>
+
+<br><br>
+
+	<label>
+		Comments:
+	</label><br>
+
+<textarea id="comments" rows="4" cols="30" placeholder="Any questions about ML Biology workshop?"></textarea><br><br>
+
+	<label>
+    	<input type="checkbox" id="terms" required>
+    	I agree to the Terms and Conditions
+	</label>
+
+ 
+	<label>
+		Salary: 
+	</label> 
+<br>
+<input type="text" id="salary" hidden>
+
+<br><br> 
+
+
+<button type="submit">Register</button>
+<button type="reset">Reset Form</button>
+
+</form>
+</body>
+</html>

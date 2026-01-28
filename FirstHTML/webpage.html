@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta attributes -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Name - Homepage</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/mystyle.css">
+
+    <!-- Internal CSS -->
+    <style>
+        h2 {
+            color: darkgreen;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== TOP LINKS (Internal href bookmarks) ===== -->
+    <div id="top">
+        <a href="#about">About</a> |
+        <a href="#courses">Courses</a> |
+        <a href="#table">Table</a> |
+        <a href="#code">Code</a> |
+        <a href="#end">End</a>
+    </div>
+
+    <hr>
+
+    <!-- ===== HEADING & FORMATTING ===== -->
+    <h1 style="color: darkblue; text-align:center;">Hi! I’m Your Name</h1>
+
+    <p>
+        <b>Bold text</b>, <i>Italic text</i>, 
+        <em>Emphasized text</em>, <u>Underlined text</u>
+    </p>
+
+    <!-- ===== IMAGE (relative path) ===== -->
+    <img src="images/photo.jpg"
+         alt="My Photo"
+         width="250"
+         height="250"
+         class="right-image">
+
+    <!-- ===== IMAGE (absolute path example) ===== -->
+    <!-- Example only: replace with a real image URL -->
+    <img src="https://via.placeholder.com/150"
+         alt="Sample Image">
+
+    <!-- ===== LINK TO ANOTHER WEBSITE ===== -->
+    <p>
+        <a href="https://www.ibab.ac.in" target="_blank">
+            Visit my institute website
+        </a>
+    </p>
+
+    <hr>
+
+    <!-- ===== DIV WITH ID ===== -->
+    <div id="about">
+        <h2>About Me</h2>
+        <p>
+            Welcome to my homepage. This page demonstrates 
+            HTML and CSS basics.
+        </p>
+    </div>
+
+    <!-- ===== LISTS ===== -->
+    <div id="courses">
+        <h2>Programs Offered</h2>
+
+        <!-- Ordered list -->
+        <ol>
+            <li>MSc Biology</li>
+            <li>MSc Bioinformatics</li>
+            <li>MSc Biotechnology</li>
+        </ol>
+
+        <!-- Unordered list -->
+        <ul>
+            <li>Hostel</li>
+            <li>Library</li>
+            <li>Labs</li>
+        </ul>
+    </div>
+
+    <!-- ===== TABLE ===== -->
+    <div id="table">
+        <h2>Student Data</h2>
+
+        <table>
+            <tr>
+                <th>Program</th>
+                <th>Students</th>
+                <th>Placement</th>
+            </tr>
+            <tr>
+                <td>MSc BDB</td>
+                <td>27</td>
+                <td>100%</td>
+            </tr>
+            <tr>
+                <td>MSc BTBI</td>
+                <td>40</td>
+                <td>100%</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- ===== PRE & CODE TAGS ===== -->
+    <div id="code">
+        <h2>Code Example</h2>
+
+        <pre>
+int main() {
+    int i = 0;
+    i++;
+    return 0;
+}
+        </pre>
+
+        <code>
+            int i = 0;
+        </code>
+    </div>
+
+    <hr>
+
+    <!-- ===== END OF PAGE ===== -->
+    <div id="end">
+        <p>This is the end of my webpage.</p>
+        <a href="#top">Back to top</a>
+    </div>
+
+</body>
+</html>
+

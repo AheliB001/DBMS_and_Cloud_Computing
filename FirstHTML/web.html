@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aheli Biswas - Homepage</title>
+
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Aheli Biswas">
+
+    <!-- INTERNAL CSS -->
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        table {
+            margin: 20px;
+            border: 1px solid black;
+        }
+
+        div {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid gray;
+        }
+    </style>
+
+    <!-- EXTERNAL CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- INLINE CSS -->
+<h1 style="color: darkred;">Welcome to My Webpage</h1>
+
+<!-- INTERNAL LINKS / BOOKMARKS -->
+<p>
+    <a href="#about">About Me</a> |
+    <a href="#course">My Course</a> |
+    <a href="#list">Subjects</a> |
+    <a href="#table">Table</a> |
+    <a href="#code">Code</a>
+</p>
+
+<hr>
+
+<!-- IMAGE (RELATIVE PATH) -->
+<img src="images/myphoto.jpg"
+     alt="My Photo"
+     width="150"
+     height="200"
+     align="right">
+
+<!-- IMAGE (ABSOLUTE PATH) -->
+<img src="https://via.placeholder.com/150"
+     alt="Sample Image">
+
+<!-- FORMATTING -->
+<p>
+    My name is <b>Aheli Biswas</b>.  
+    I am a <i>BSc student</i>.  
+    I enjoy <em>learning biology and computers</em>.
+</p>
+
+<!-- ABOUT SECTION -->
+<div id="about">
+    <h2>About Me</h2>
+    <p>
+        I am studying Life Sciences and exploring basic web development.
+    </p>
+</div>
+
+<!-- COURSE SECTION WITH IBAB LINK -->
+<div id="course">
+    <h2>My Course</h2>
+    <p>
+        I am currently pursuing a <b>BSc Dual Degree in Life Sciences</b> at
+        <b>Institute of Bioinformatics and Applied Biotechnology (IBAB)</b>.
+    </p>
+
+    <p>
+        For more information about my program, visit:
+        <br>
+        <a href="https://www.ibab.ac.in/academics/" target="_blank">
+            IBAB Academic Programs
+        </a>
+    </p>
+</div>
+
+<!-- LISTS -->
+<div id="list">
+    <h2>Subjects I Study</h2>
+
+    <!-- UNORDERED LIST -->
+    <ul>
+        <li>Biotechnology</li>
+        <li>Bioinformatics</li>
+        <li>Computer Basics</li>
+    </ul>
+
+    <!-- ORDERED LIST -->
+    <ol>
+        <li>Attend classes</li>
+        <li>Study daily</li>
+        <li>Practice coding</li>
+    </ol>
+</div>
+
+<!-- TABLE -->
+<div id="table">
+    <h2>Marks Table</h2>
+
+    <table>
+        <tr>
+            <th>Subject</th>
+            <th>Marks</th>
+        </tr>
+        <tr>
+            <td>Biology</td>
+            <td>85</td>
+        </tr>
+        <tr>
+            <td>Computer</td>
+            <td>90</td>
+        </tr>
+    </table>
+</div>
+
+<!-- PRE & CODE -->
+<div id="code">
+    <h2>Code Example</h2>
+
+    <pre>
+This is preformatted text.
+Spacing is preserved.
+    </pre>
+
+    <code>
+        print("Hello World")
+    </code>
+</div>
+
+</body>
+</html>

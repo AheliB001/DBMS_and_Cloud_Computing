@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ML Biology Workshop</title>
+
+    <script src="javascript.js"></script>
+</head>
+
+<body>
+
+<h1>ML Biology Workshop</h1>
+
+<hr>
+
+<h2>1. User Registration</h2>
+
+<form action="/cgi-bin/register.py" method="post" onsubmit="return validateForm()">
+
+    Name:
+    <input type="text" id="name" name="name">
+    <br><br>
+
+    Email:
+    <input type="text" id="email" name="email">
+    <br><br>
+
+    Password:
+    <input type="password" id="password">
+    <br><br>
+
+    Confirm Password:
+    <input type="password" id="confirm_password">
+    <br><br>
+
+    Category:
+    <input type="radio" id="student" name="category" value="student"> Student
+    <input type="radio" id="professional" name="category" value="professional"> Professional
+    <br><br>
+
+    Date of Birth:
+    <input type="date" id="dob" name="dob">
+    <br><br>
+
+    State:
+    <select id="state" name="state">
+        <option value="">Select State</option>
+        <option value="Karnataka">Karnataka</option>
+        <option value="Tamil Nadu">Tamil Nadu</option>
+        <option value="Kerala">Kerala</option>
+    </select>
+    <br><br>
+
+    <input type="checkbox" id="terms">
+    I agree to the Terms and Conditions
+    <br><br>
+
+    <input type="submit" value="Register">
+    <input type="reset" value="Reset">
+
+</form>
+
+<hr>
+
+<h2>2. View list of Registered Users</h2>
+
+<form action="/cgi-bin/list_users.py" method="get">
+    <input type="submit" value="Show All Registered Users">
+</form>
+
+<hr>
+
+<h2>3. Delete Specific Registered User</h2>
+
+<form action="/cgi-bin/delete_user.py" method="post">
+    Enter Email to Delete:
+    <input type="text" name="email" required>
+    <br><br>
+    <input type="submit" value="Delete User">
+</form>
+
+<hr>
+
+</body>
+</html>

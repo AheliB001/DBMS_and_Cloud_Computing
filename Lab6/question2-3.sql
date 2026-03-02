@@ -1,0 +1,11 @@
+CREATE DATABASE library;
+SHOW DATABASES;
+USE library;
+
+
+CREATE TABLE Books (BookID INT PRIMARY KEY,BookName VARCHAR(100),Publisher VARCHAR(50),Year INT,ISBN VARCHAR(30));
+desc Books;
+
+
+
+

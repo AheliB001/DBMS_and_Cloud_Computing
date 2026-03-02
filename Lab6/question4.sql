@@ -1,0 +1,2 @@
+ALTER TABLE Books DROP COLUMN ISBN;
+desc Books;

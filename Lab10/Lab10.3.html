@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ensembl Gene Search</title>
+</head>
+
+<body>
+
+<h2>Ensembl Gene Database Search</h2>
+
+<!-- 1. Gene Details -->
+<h3>1. Search Gene Details</h3>
+
+<form action="/cgi-bin/ensembl_controller.py" method="post">
+    Gene ID:
+    <input type="text" name="gene_id">
+    <input type="hidden" name="action" value="gene">
+    <input type="submit" value="Submit">
+</form>
+
+<br>
+
+<!-- 2. Transcripts -->
+<h3>2. Search Gene Transcripts</h3>
+
+<form action="/cgi-bin/ensembl_controller.py" method="post">
+    Gene ID:
+    <input type="text" name="trans_gene">
+    <input type="hidden" name="action" value="transcript">
+    <input type="submit" value="Submit">
+</form>
+
+<br>
+
+<!-- 3. Chromosome -->
+<h3>3. Search Genes in Chromosome</h3>
+
+<form action="/cgi-bin/ensembl_controller.py" method="post">
+    Chromosome:
+    <input type="text" name="chr">
+    <input type="hidden" name="action" value="chromosome">
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
+

@@ -1,0 +1,102 @@
+mkdir express-docker-app
+cd express-docker-app
+
+
+vim package.json
+vim Dockerfile
+
+
+sudo docker build \
+--build-arg HTTP_PROXY=http://255hsbd001%40ibab.ac.in:Aheli%4014344@proxy.ibab.ac.in:3128 \
+--build-arg HTTPS_PROXY=http://255hsbd001%40ibab.ac.in:Aheli%4014344@proxy.ibab.ac.in:3128 \
+-t express-app .
+
+# OUTPUT:
+# [+] Building 2.3s (10/10) FINISHED
+# => [internal] load build definition from Dockerfile
+# => [internal] load metadata for docker.io/library/node:18
+# => [1/5] FROM docker.io/library/node:18
+# => [2/5] WORKDIR /app
+# => [3/5] COPY package*.json ./
+# => [4/5] RUN npm install
+# => [5/5] COPY . .
+# => exporting to image
+# => naming to docker.io/library/express-app:latest
+
+
+sudo docker run -p 8012:8012 express-app
+
+# OUTPUT:
+# Example app listening at http://localhost:8012
+
+
+sudo docker ps -a
+
+# OUTPUT:
+# CONTAINER ID   IMAGE         STATUS         PORTS
+# b530aea38d56   express-app   Up             0.0.0.0:8012->8012/tcp
+
+
+sudo docker stop b530aea38d56
+
+
+sudo docker run -d -p 8013:8012 --name app1 express-app
+sudo docker run -d -p 8014:8012 --name app2 express-app
+
+
+docker login -u ahelibiswas
+
+
+sudo docker images
+
+# OUTPUT:
+# IMAGE                TAG       SIZE
+# express-app          latest    ~1.5GB
+# node                 18        ~1.5GB
+
+
+sudo docker tag express-app:latest ahelibiswas/express-app:latest
+
+
+sudo docker push ahelibiswas/express-app:latest
+
+# OUTPUT:
+# The push refers to repository [docker.io/ahelibiswas/express-app]
+# latest: digest: sha256:f0f15c3ed8ea4e0eb7f9cd44677c07cd43cbd24f0ac11020f99a6f5896986537
+
+
+sudo docker pull ahelibiswas/express-app:latest
+
+# OUTPUT:
+# Status: Image is up to date for ahelibiswas/express-app:latest
+
+
+sudo docker pull rganap/express-app:latest
+
+#OUTPUT 
+#latest: Pulling from rganap/express-app
+#3b83cfffece5: Pull complete 
+#4bc2a4e1e4df: Pull complete 
+#32b9ad8fd86f: Pull complete 
+#8e0fd4fd5339: Pull complete 
+#Digest: sha256:dbfe802677be95fa7b2ac3c49af3f3949e8242581155a1287082a830293aba8a
+#Status: Downloaded newer image for rganap/express-app:latest
+#docker.io/rganap/express-app:latest
+
+
+sudo docker pull nakulananandhan/express-app:latest
+
+#latest: Pulling from nakulananandhan/express-app
+#de3f19d90b5a: Pull complete 
+#c63f9a876e61: Pull complete 
+#7ee649646f1f: Pull complete 
+#3ec436a1400f: Pull complete 
+#Digest: sha256:1dd4f6c9ed459cd248c181f95a464a604c080c9dbd5b2dcb4653e2638d69bc7e
+#Status: Downloaded newer image for nakulananandhan/express-app:latest
+#docker.io/nakulananandhan/express-app:latest
+
+
+sudo docker run -d -p 8016:8012 ahelibiswas/express-app:latest
+
+# OUTPUT:
+# Container started successfully 

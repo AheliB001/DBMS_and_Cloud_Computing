@@ -1,0 +1,20 @@
+Node.js v25.9.0 documentation
+
+    Table of contents Index Other versions Options 
+
+Table of contents
+
+    HTTP
+        Class: http.Agent
+            new Agent([options])
+            agent.createConnection(options[, callback])
+            agent.keepSocketAlive(socket)
+            agent.reuseSocket(socket, request)
+            agent.destroy()
+            agent.freeSockets
+            agent.getName([options])
+            agent.maxFreeSockets
+            agent.maxSockets
+            agent.maxTotalSockets
+            agent.requests
+            agent.sockets
